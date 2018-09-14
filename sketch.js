@@ -74,7 +74,5 @@ function createMightyParticles(){
 }
 
 function mouseClicked(){
-    //we will create a mighty system of particles here
     createMightyParticles();
-    
 }
