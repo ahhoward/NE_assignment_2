@@ -1,0 +1,41 @@
+var x;
+var y;
+//var pacMan;
+//var body;
+
+function setup() {
+        createCanvas(500,500);
+    frameRate(40);
+   x = width;
+  	y = height;
+	//body = arc(point1, point2, size, startArc,stopArc);
+	
+	
+}
+
+function draw(){
+background(330);
+
+  fill(45,45,250);
+	arc(width/2,height/3, 60, 60,PI+QUARTER_PI, PI-QUARTER_PI);
+
+
+  /*
+  arc fills from left to right, anticlockwise, so for left facing
+  need to start at -sin around to +sin.
+  */
+	fill(255,255,0);
+	var backWrd=(sin(frameCount)+1)/2*(PI+QUARTER_PI)/6;
+	arc(-x+width,y/2, 90, 90, backWrd, -backWrd);
+	
+
+    noStroke();
+    fill(2,255,32);
+	var angle=(sin(frameCount)+1)/2*(PI)/6;
+	arc(x,height/2, 90, 90, angle, -angle);
+
+	x++;
+if (x>width){
+    x=0;}
+
+}//draw
